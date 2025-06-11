@@ -26,5 +26,7 @@ document.getElementById("icon")!.setAttribute("href", config.icon);
 // export const commits = await client.rest.gists.listCommits({ gist_id });
 
 export const files = Object.values(res?.data.files!)
-    .sort((a, b) => a?.filename?.localeCompare(b?.filename!)!)
+    // blog articles with larger date values ​​(indicating newer) should be ranked higher,
+    // and sorted in descending order.
+    .sort((a, b) => -a?.filename?.localeCompare(b?.filename!)!)
     .filter((file) => file !== null);
