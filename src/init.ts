@@ -21,6 +21,8 @@ export const config: Config = parse_config(
     icon: "/icon",
 };
 
+document.title = config.title;
+
 document.getElementById("icon")!.setAttribute("href", config.icon);
 
 // export const commits = await client.rest.gists.listCommits({ gist_id });
