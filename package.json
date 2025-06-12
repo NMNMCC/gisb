@@ -17,6 +17,7 @@
         "react-dom": "^18",
         "react-markdown": "^10.1.0",
         "react-use": "^17.6.0",
+        "rehype-raw": "^7.0.0",
         "remark-gfm": "^4.0.1",
         "tailwindcss": "^4.1.8",
         "wouter": "^3.7.1",

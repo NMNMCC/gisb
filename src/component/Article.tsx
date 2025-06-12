@@ -2,6 +2,7 @@ import type { FC } from "react";
 import Markdown from "react-markdown";
 import { useAsync } from "react-use";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { res } from "../init";
 
 export namespace Article {
@@ -10,7 +11,11 @@ export namespace Article {
     };
 
     export const Show: FC<Show> = ({ content }) => {
-        return <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>;
+        return (
+            <Markdown remarkPlugins={[rehypeRaw, remarkGfm]}>
+                {content}
+            </Markdown>
+        );
     };
 
     export type Container = {

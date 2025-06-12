@@ -2,6 +2,7 @@ import type { FC } from "react";
 import Markdown from "react-markdown";
 import { Link } from "wouter";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 export namespace Preview {
     export type Show = {
@@ -13,7 +14,7 @@ export namespace Preview {
             <div className="cursor-pointer **:!m-0 hover:opacity-80">
                 <Link href={id} asChild>
                     <div className="line-clamp-3">
-                        <Markdown remarkPlugins={[remarkGfm]}>
+                        <Markdown remarkPlugins={[rehypeRaw, remarkGfm]}>
                             {content}
                         </Markdown>
                     </div>
