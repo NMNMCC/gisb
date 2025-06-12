@@ -14,7 +14,10 @@ export namespace Preview {
             <div className="cursor-pointer **:!m-0 hover:opacity-80">
                 <Link href={id} asChild>
                     <div className="line-clamp-3">
-                        <Markdown remarkPlugins={[rehypeRaw, remarkGfm]}>
+                        <Markdown
+                            rehypePlugins={[rehypeRaw]}
+                            remarkPlugins={[remarkGfm]}
+                        >
                             {content}
                         </Markdown>
                     </div>

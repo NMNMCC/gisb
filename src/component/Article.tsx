@@ -12,7 +12,7 @@ export namespace Article {
 
     export const Show: FC<Show> = ({ content }) => {
         return (
-            <Markdown remarkPlugins={[rehypeRaw, remarkGfm]}>
+            <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
                 {content}
             </Markdown>
         );
