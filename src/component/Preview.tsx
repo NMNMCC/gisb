@@ -9,10 +9,11 @@ export namespace Preview {
         id: string;
         content: string;
     };
+
     export const Show: FC<Show> = ({ id, content }) => {
         return (
             <div className="cursor-pointer **:!m-0 hover:opacity-80">
-                <Link href={id} asChild>
+                <Link href={`/article/${id}`} asChild>
                     <div className="line-clamp-3">
                         <Markdown
                             rehypePlugins={[rehypeRaw]}

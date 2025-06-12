@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <Main>
             <Router>
-                <Route path="/:id">
+                <Route path="/article/:id">
                     {({ id }) => (
                         <Article.Container id={id}></Article.Container>
                     )}
